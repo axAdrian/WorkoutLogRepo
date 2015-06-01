@@ -10,5 +10,9 @@ namespace WorkoutLog.Models
         public int exerciseID { get; set; }
         public string exerciseName { get; set; }
         public string exerciseDesc { get; set; }
+
+        public int trainingID { get; set; }
+
+        public virtual Training Training { get; set; }
     }
 }
