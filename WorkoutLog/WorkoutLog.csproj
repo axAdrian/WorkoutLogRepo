@@ -125,6 +125,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Exercise.cs" />
+    <Compile Include="Models\ExeTrain.cs" />
     <Compile Include="Models\Training.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

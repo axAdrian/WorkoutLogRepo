@@ -11,6 +11,6 @@ namespace WorkoutLog.Models
         public DateTime Date { get; set; }
         public string trainingName { get; set; }
 
-        public virtual ICollection<Exercise> Exercises { get; set; }
+        public virtual ICollection<ExeTrain> ExeTrains  { get; set; }
     }
 }

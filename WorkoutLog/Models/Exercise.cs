@@ -13,6 +13,6 @@ namespace WorkoutLog.Models
 
         public int trainingID { get; set; }
 
-        public virtual Training Training { get; set; }
+        public virtual ICollection<ExeTrain> ExeTrains { get; set; }
     }
-}
+} 
