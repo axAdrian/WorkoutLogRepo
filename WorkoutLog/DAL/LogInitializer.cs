@@ -9,13 +9,13 @@ using WorkoutLog.Models;
 
 namespace WorkoutLog.DAL
 {
-    public class LogInitializer : MigrateDatabaseToLatestVersion<LogContext, Configuration>
+    public class LogInitializer : DropCreateDatabaseAlways<LogContext>
     {
-        //protected override void Seed(LogContext context)
-        //{
-        //    SeedLogContext(context);
-        //    base.Seed(context);
-        //}
+        protected override void Seed(LogContext context)
+        {
+            SeedLogContext(context);
+            base.Seed(context);
+        }
 
         public static void SeedLogContext(LogContext context)
         {
