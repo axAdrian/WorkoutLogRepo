@@ -7,7 +7,7 @@ namespace WorkoutLog.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    public sealed class Configuration : DbMigrationsConfiguration<WorkoutLog.DAL.LogContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<WorkoutLog.DAL.LogContext>
     {
         public Configuration()
         {
