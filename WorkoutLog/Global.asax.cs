@@ -19,7 +19,7 @@ namespace WorkoutLog
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
-            Database.SetInitializer<LogContext>(new LogInitializer());
+           // Database.SetInitializer<LogContext>(new LogInitializer());   // drugi sposob na wypenianie bazy
         }
     }
 }

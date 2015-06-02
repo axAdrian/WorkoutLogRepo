@@ -13,6 +13,12 @@ namespace WorkoutLog.DAL
         {
             
         }
+
+        static LogContext()
+        {
+            Database.SetInitializer<LogContext>(new LogInitializer());
+        }
+
         public DbSet<Exercise> Exercises { get; set; }
         public DbSet<Training> Trainings { get; set; } 
     }
