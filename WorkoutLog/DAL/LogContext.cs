@@ -20,6 +20,7 @@ namespace WorkoutLog.DAL
         }
 
         public DbSet<Exercise> Exercises { get; set; }
-        public DbSet<Training> Trainings { get; set; } 
+        public DbSet<Training> Trainings { get; set; }
+        public DbSet<ExeTrain> ExeTrains { get; set; }
     }
 }

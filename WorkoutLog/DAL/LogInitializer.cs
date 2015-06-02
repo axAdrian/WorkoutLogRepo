@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data.Entity;
 using System.Data.Entity.Migrations;
 using System.Linq;
@@ -8,15 +9,15 @@ using WorkoutLog.Models;
 
 namespace WorkoutLog.DAL
 {
-    public class LogInitializer : DropCreateDatabaseAlways<LogContext>
+    public class LogInitializer : MigrateDatabaseToLatestVersion<LogContext, Configuration>
     {
-        protected override void Seed(LogContext context)
-        {
-            SeedLogContext(context);
-            base.Seed(context);
-        }
+        //protected override void Seed(LogContext context)
+        //{
+        //    SeedLogContext(context);
+        //    base.Seed(context);
+        //}
 
-        private void SeedLogContext(LogContext context)
+        public static void SeedLogContext(LogContext context)
         {
             var tr = new List<Training>
             {

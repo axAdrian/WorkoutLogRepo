@@ -15,9 +15,9 @@ namespace WorkoutLog.Controllers
         public ActionResult Index()
         {
             //przykladowa tabela w bazie
-            Training newTraining = new Training { Date = DateTime.Today, trainingName = "najebator"};
-            db.Trainings.Add(newTraining);
-            db.SaveChanges();
+            //Training newTraining = new Training { Date = DateTime.Today, trainingName = "najebator"};
+            //db.Trainings.Add(newTraining);
+            //db.SaveChanges();
 
             return View();
         }
