@@ -29,7 +29,7 @@ namespace WorkoutLog.Controllers
             return View();
         }
 
-        public ActionResult Contact()
+        public ActionResult Info()
         {
             ViewBag.Message = "Your contact page.";
 
