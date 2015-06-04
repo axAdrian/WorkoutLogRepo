@@ -6,16 +6,17 @@ using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Web;
 using WorkoutLog.Models;
+using WorkoutLog.Migrations;
 
 namespace WorkoutLog.DAL
 {
-    public class LogInitializer : DropCreateDatabaseAlways<LogContext>
+    public class LogInitializer : MigrateDatabaseToLatestVersion<LogContext, WorkoutLog.Migrations.Configuration>
     {
-        protected override void Seed(LogContext context)
-        {
-            SeedLogContext(context);
-            base.Seed(context);
-        }
+        //protected override void Seed(LogContext context)
+        //{
+        //    SeedLogContext(context);
+        //    base.Seed(context);
+        //}
 
         public static void SeedLogContext(LogContext context)
         {

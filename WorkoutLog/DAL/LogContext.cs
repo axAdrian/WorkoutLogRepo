@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Web;
+using WorkoutLog.Migrations;
 using WorkoutLog.Models;
 
 namespace WorkoutLog.DAL
@@ -11,7 +12,9 @@ namespace WorkoutLog.DAL
     {
         public LogContext() : base("LogContext")
         {
-            
+           // Database.SetInitializer<LogContext>(new MigrateDatabaseToLatestVersion<LogContext, Configuration>());
+           // Database.SetInitializer<LogContext>(new LogInitializer());
+
         }
 
         static LogContext()
