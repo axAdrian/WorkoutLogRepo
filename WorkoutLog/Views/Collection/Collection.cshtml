@@ -1,7 +1,18 @@
-﻿@{
+﻿@model WorkoutLog.ViewModel.CollectionViewModel
+
+@{
     ViewBag.Title = "Atlas ćwiczeń";
 }
 
-<div class="row">
-    <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Dodaj nowe &raquo;</a></p>
+
+
+<div>
+    <ul>
+        @foreach (var exercises in Model.Exercises)
+        {
+            <li>
+                @exercises.trainingName
+            </li>
+        }
+    </ul>
 </div>

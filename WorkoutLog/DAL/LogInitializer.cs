@@ -24,8 +24,16 @@ namespace WorkoutLog.DAL
                 new Training() {Date = DateTime.Today, trainingName = "plecy"},
                 new Training() {Date = DateTime.Today, trainingName = "nogi"}
             };
-
             tr.ForEach(g => context.Trainings.AddOrUpdate(g));
+
+            var ex = new List<Exercise>
+            {
+                new Exercise() { exerciseDesc = "nowe cwiczonko", exerciseName = "ohp"},
+                new Exercise() { exerciseDesc = "super klata", exerciseName = "push up"},
+            };
+            ex.ForEach(g => context.Exercises.AddOrUpdate(g));
+
+            
             context.SaveChanges();
         }
     }

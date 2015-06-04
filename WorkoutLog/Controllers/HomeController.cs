@@ -10,7 +10,7 @@ namespace WorkoutLog.Controllers
 {
     public class HomeController : Controller
     {
-        private LogContext db = new LogContext(); //do polaczenia z baza 
+       // private LogContext db = new LogContext(); //do polaczenia z baza 
 
         public ActionResult Index()
         {
