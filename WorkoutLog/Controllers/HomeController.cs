@@ -22,7 +22,7 @@ namespace WorkoutLog.Controllers
             return View();
         }
 
-        public ActionResult StaticView()
+        public ActionResult info()
         {
 
             return View();

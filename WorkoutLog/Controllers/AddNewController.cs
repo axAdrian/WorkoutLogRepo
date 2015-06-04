@@ -6,13 +6,17 @@ using System.Web.Mvc;
 
 namespace WorkoutLog.Controllers
 {
-    public class CollectionController : Controller
+    public class AddNewController : Controller
     {
-        // GET: Collection
+        // GET: AddNew
         public ActionResult Index()
         {
+            return View();
+        }
 
-            return View("Collection");
+        public ActionResult Add()
+        {
+            return View();
         }
     }
 }
