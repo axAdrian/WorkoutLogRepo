@@ -22,18 +22,11 @@ namespace WorkoutLog.Controllers
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult StaticView()
         {
-            ViewBag.Message = "Your application description page.";
 
             return View();
         }
 
-        public ActionResult Info()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
-        }
     }
 }

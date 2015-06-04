@@ -11,8 +11,6 @@ namespace WorkoutLog.Models
         public string exerciseName { get; set; }
         public string exerciseDesc { get; set; }
 
-        public int trainingID { get; set; }
-
         public virtual ICollection<ExeTrain> ExeTrains { get; set; }
     }
 } 

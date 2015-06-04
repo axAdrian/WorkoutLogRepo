@@ -119,6 +119,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\CollectionController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="DAL\LogContext.cs" />
     <Compile Include="DAL\LogInitializer.cs" />
@@ -132,6 +133,10 @@
     <Compile Include="Migrations\201506022227294_added.cs" />
     <Compile Include="Migrations\201506022227294_added.Designer.cs">
       <DependentUpon>201506022227294_added.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201506041349567_NewOne.cs" />
+    <Compile Include="Migrations\201506041349567_NewOne.Designer.cs">
+      <DependentUpon>201506041349567_NewOne.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Exercise.cs" />
@@ -171,10 +176,10 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Info.cshtml" />
+    <Content Include="Views\Collection\Collection.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Home\StaticView.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -192,6 +197,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201506022227294_added.resx">
       <DependentUpon>201506022227294_added.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201506041349567_NewOne.resx">
+      <DependentUpon>201506041349567_NewOne.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
