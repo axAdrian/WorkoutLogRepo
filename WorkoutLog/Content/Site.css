@@ -22,3 +22,20 @@ select,
 textarea {
     max-width: 280px;
 }
+
+.home-footer {
+    text-align: center;
+}
+
+.home-page {
+    text-align: justify;
+   
+}
+
+#logo {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    display: block;
+}
+

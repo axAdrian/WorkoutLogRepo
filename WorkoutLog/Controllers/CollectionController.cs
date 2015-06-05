@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using WorkoutLog.DAL;
+using WorkoutLog.Models;
 using WorkoutLog.ViewModel;
 
 namespace WorkoutLog.Controllers
@@ -23,6 +24,26 @@ namespace WorkoutLog.Controllers
             };
 
             return View("Collection", vm);
+        }
+
+        public ActionResult Delete(int id)
+        {
+            Training tr = db.Trainings.Find(id);
+            db.Trainings.Remove(tr);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult Create(Exercise exercise)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Exercises.Add(exercise);
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+
+            return View();
         }
     }
 }

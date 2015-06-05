@@ -1,13 +1,14 @@
-using WorkoutLog.DAL;
+
 
 namespace WorkoutLog.Migrations
 {
+    using WorkoutLog.DAL;
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    public sealed class Configuration : DbMigrationsConfiguration<WorkoutLog.DAL.LogContext>
+    public sealed class Configuration : DbMigrationsConfiguration<LogContext>
     {
         public Configuration()
         {
@@ -15,7 +16,7 @@ namespace WorkoutLog.Migrations
             ContextKey = "WorkoutLog.DAL.LogContext";
         }
 
-        protected override void Seed(WorkoutLog.DAL.LogContext context)
+        protected override void Seed(LogContext context)
         {
 
             LogInitializer.SeedLogContext(context);

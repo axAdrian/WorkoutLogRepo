@@ -20,12 +20,12 @@ namespace WorkoutLog.DAL
 
         public static void SeedLogContext(LogContext context)
         {
-            var tr = new List<Training>
-            {
-                new Training() {Date = DateTime.Today, trainingName = "plecy"},
-                new Training() {Date = DateTime.Today, trainingName = "nogi"}
-            };
-            tr.ForEach(g => context.Trainings.AddOrUpdate(g));
+            //var tr = new List<Training>
+            //{
+            //    new Training() {Date = DateTime.Today, trainingName = "plecy"},
+            //    new Training() {Date = DateTime.Today, trainingName = "nogi"}
+            //};
+            //tr.ForEach(g => context.Trainings.AddOrUpdate(g));
 
             var ex = new List<Exercise>
             {
