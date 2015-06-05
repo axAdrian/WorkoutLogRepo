@@ -4,18 +4,6 @@
     ViewBag.Title = "Atlas ćwiczeń";
 }
 
-
-
-@*<div>
-    <ul>
-        @foreach (var exercises in Model.Exercises)
-        {
-            <li>
-                @exercises.trainingName
-            </li>
-        }
-    </ul>
-</div>*@
 <br/>
 <a href="@Url.Action("Create", "Collection")">
     <button type="button" class="btn btn-default btn-lg">
@@ -38,9 +26,9 @@
         @foreach (var exercises in Model.Exercises)
         {
             <tr>
-                <td>@exercises.trainingName</td>
-                <td>@exercises.Date</td>
-                <td><a href="@Url.Action("Delete", "Collection", new {id = exercises.trainingID})"><button type="button" class="btn btn-default">Usuń <span class="glyphicon glyphicon-remove"></span></button></a></td>
+                <td>@exercises.exerciseName</td>
+                <td>@exercises.exerciseDesc</td>
+                <td><a href="@Url.Action("Delete", "Collection", new {id = exercises.exerciseID})"><button type="button" class="btn btn-default">Usuń <span class="glyphicon glyphicon-remove"></span></button></a></td>
             </tr>
         }
         </tbody>

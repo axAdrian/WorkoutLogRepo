@@ -8,6 +8,6 @@ namespace WorkoutLog.ViewModel
 {
     public class CollectionViewModel
     {
-        public IEnumerable<Training> Exercises { get; set; } 
+        public IEnumerable<Exercise> Exercises { get; set; } 
     }
 }

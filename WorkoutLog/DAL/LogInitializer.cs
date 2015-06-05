@@ -27,15 +27,15 @@ namespace WorkoutLog.DAL
             //};
             //tr.ForEach(g => context.Trainings.AddOrUpdate(g));
 
-            var ex = new List<Exercise>
-            {
-                new Exercise() { exerciseDesc = "nowe cwiczonko", exerciseName = "ohp"},
-                new Exercise() { exerciseDesc = "super klata", exerciseName = "push up"},
-            };
-            ex.ForEach(g => context.Exercises.AddOrUpdate(g));
+            //var ex = new List<Exercise>
+            //{
+            //    new Exercise() { exerciseDesc = "nowe cwiczonko", exerciseName = "ohp"},
+            //    new Exercise() { exerciseDesc = "super klata", exerciseName = "push up"},
+            //};
+            //ex.ForEach(g => context.Exercises.AddOrUpdate(g));
 
             
-            context.SaveChanges();
+            //context.SaveChanges();
         }
     }
 }

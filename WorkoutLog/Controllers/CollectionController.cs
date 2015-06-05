@@ -16,7 +16,7 @@ namespace WorkoutLog.Controllers
 
         public ActionResult Index()
         {
-            var exercises = db.Trainings;
+            var exercises = db.Exercises;
 
             var vm = new CollectionViewModel()
             {
@@ -28,22 +28,27 @@ namespace WorkoutLog.Controllers
 
         public ActionResult Delete(int id)
         {
-            Training tr = db.Trainings.Find(id);
-            db.Trainings.Remove(tr);
+            Exercise exe = db.Exercises.Find(id);
+            db.Exercises.Remove(exe);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
 
-        public ActionResult Create(Exercise exercise)
+        [HttpGet]
+        public ActionResult Create()
         {
-            if (ModelState.IsValid)
-            {
-                db.Exercises.Add(exercise);
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
+            var exe = new Exercise();
 
-            return View();
+            return View(exe);
+        }
+
+        [HttpPost]
+        public ActionResult Create(Exercise exe)
+        {
+            db.Exercises.Add(exe);
+            db.SaveChanges();
+
+            return RedirectToAction("Index");
         }
     }
 }
