@@ -12,9 +12,7 @@ namespace WorkoutLog.DAL
     {
         public LogContext() : base("LogContext")
         {
-           // Database.SetInitializer<LogContext>(new MigrateDatabaseToLatestVersion<LogContext, Configuration>());
-           // Database.SetInitializer<LogContext>(new LogInitializer());
-
+           
         }
 
         static LogContext()

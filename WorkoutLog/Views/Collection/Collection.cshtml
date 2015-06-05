@@ -7,7 +7,7 @@
 <br/>
 <a href="@Url.Action("Create", "Collection")">
     <button type="button" class="btn btn-default btn-lg">
-        Dodaj nowy <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+        Dodaj nowe <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
     </button>
 </a>
 <br/>
@@ -16,9 +16,9 @@
     <table id="example" class="table table-striped table-bordered" cellspacing="0" width="60%">
         <thead>
             <tr>
-                <th>Name</th>
-                <th>Description</th>
-                <th>Options</th>
+                <th>Nazwa</th>
+                <th>Opis ćwiczenia</th>
+                <th>Opcje</th>
             </tr>
         </thead>
 
@@ -28,7 +28,9 @@
             <tr>
                 <td>@exercises.exerciseName</td>
                 <td>@exercises.exerciseDesc</td>
-                <td><a href="@Url.Action("Delete", "Collection", new {id = exercises.exerciseID})"><button type="button" class="btn btn-default">Usuń <span class="glyphicon glyphicon-remove"></span></button></a></td>
+                <td><a href="@Url.Action("Delete", "Collection", new {id = exercises.exerciseID})">
+                    <button type="button" class="btn btn-default">Usuń <span class="glyphicon glyphicon-remove"></span></button>
+                </a></td>
             </tr>
         }
         </tbody>

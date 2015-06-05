@@ -45,10 +45,16 @@ namespace WorkoutLog.Controllers
         [HttpPost]
         public ActionResult Create(Exercise exe)
         {
-            db.Exercises.Add(exe);
-            db.SaveChanges();
+            if (!ModelState.IsValid)
+                return View("Create");
+            else
+            {
+                db.Exercises.Add(exe);
+                db.SaveChanges();
 
-            return RedirectToAction("Index");
+                return RedirectToAction("Index");
+            }
+            
         }
     }
 }

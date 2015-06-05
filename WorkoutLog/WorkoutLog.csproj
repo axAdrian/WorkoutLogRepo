@@ -147,11 +147,16 @@
     <Compile Include="Migrations\201506042124202_try2.Designer.cs">
       <DependentUpon>201506042124202_try2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201506052018144_exercise-update.cs" />
+    <Compile Include="Migrations\201506052018144_exercise-update.Designer.cs">
+      <DependentUpon>201506052018144_exercise-update.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Exercise.cs" />
     <Compile Include="Models\ExeTrain.cs" />
     <Compile Include="Models\Training.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModel\AddNewViewModel.cs" />
     <Compile Include="ViewModel\CollectionViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -194,12 +199,12 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Home\info.cshtml" />
-    <Content Include="Views\Collection\Index.cshtml" />
     <Content Include="Views\Collection\Create.cshtml" />
+    <Content Include="Views\AddNew\Index.cshtml" />
+    <Content Include="Views\AddNew\_Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\AddNew\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -223,6 +228,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201506042124202_try2.resx">
       <DependentUpon>201506042124202_try2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201506052018144_exercise-update.resx">
+      <DependentUpon>201506052018144_exercise-update.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
