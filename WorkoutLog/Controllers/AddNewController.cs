@@ -33,6 +33,7 @@ namespace WorkoutLog.Controllers
 
         public ActionResult Details()
         {
+          
             
 
             return PartialView("_Details");
