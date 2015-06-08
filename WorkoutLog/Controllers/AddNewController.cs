@@ -33,10 +33,18 @@ namespace WorkoutLog.Controllers
 
         public ActionResult Details()
         {
-          
-            
+            var traninig = db.Trainings.ToList();
+            var exercise = db.Exercises.ToList();
+            var exetrain = db.ExeTrains.ToList();
 
-            return PartialView("_Details");
+            var vm = new AddNewViewModel()
+            {
+                Trainings = traninig,
+                Exercises = exercise,
+                Exetrains = exetrain
+            };
+            
+            return PartialView("_Details", vm);
         }
 
     }
