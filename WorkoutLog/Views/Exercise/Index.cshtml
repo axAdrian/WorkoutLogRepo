@@ -1,11 +1,11 @@
-﻿@model WorkoutLog.ViewModel.CollectionViewModel
+﻿@model IEnumerable<WorkoutLog.Models.Exercise>
 
 @{
     ViewBag.Title = "Atlas ćwiczeń";
 }
 
 <br/>
-<a href="@Url.Action("Create", "Collection")">
+<a href="@Url.Action("Create", "Exercise")">
     <button type="button" class="btn btn-default btn-lg">
         Dodaj nowe <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
     </button>
@@ -23,12 +23,12 @@
         </thead>
 
         <tbody>
-        @foreach (var exercises in Model.Exercises)
+        @foreach (var exercises in Model)
         {
             <tr>
                 <td>@exercises.ExerciseName</td>
                 <td>@exercises.ExerciseDesc</td>
-                <td><a href="@Url.Action("Delete", "Collection", new {id = exercises.ExerciseID})">
+                <td><a href="@Url.Action("Delete", "Exercise", new {id = exercises.ExerciseID})">
                     <button type="button" class="btn btn-default">Usuń <span class="glyphicon glyphicon-remove"></span></button>
                 </a></td>
             </tr>

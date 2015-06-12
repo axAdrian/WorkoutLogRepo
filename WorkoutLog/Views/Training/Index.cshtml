@@ -1,4 +1,4 @@
-﻿@model WorkoutLog.ViewModel.AddNewViewModel
+﻿@model IEnumerable<WorkoutLog.Models.Training>
 
 @{
     ViewBag.Title = "Index";
@@ -8,7 +8,7 @@
 <script src="~/Scripts/jquery-2.1.4.js"></script>
 <script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
 <br />
-<a href="@Url.Action("Add", "AddNew")">
+<a href="@Url.Action("Create", "Training")">
     <button type="button" class="btn btn-default btn-lg">
         Dodaj nowy trening <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
     </button>
@@ -30,12 +30,12 @@
     });
 
     function myFunction() {
-        $('#detailsPlace').load("@Url.Action("Details" , "AddNew" )");
+        $('#detailsPlace').load("@Url.Action("Details" , "Training" )");
     }
            
         </script>
 
-        <script type="text/javascript">
+        @*<script type="text/javascript">
 
         function getView() {
 
@@ -43,33 +43,28 @@
 
             }
 
-     </script>
+     </script>*@
         <tbody>
-        @foreach (var trainings in Model.Trainings)
+        @foreach (var trainings in Model)
         {
             <tr>
                 <td>@trainings.Date</td>
                 <td>@trainings.TrainingName</td>
                 <td>
                     
-                    <a href="@Url.Action("Delete", "Collection", new {id = trainings.TrainingID})">
+                    <a href="@Url.Action("Delete", "Training", new {id = trainings.TrainingID})">
                         <button type="button" class="btn btn-default">Usuń <span class="glyphicon glyphicon-remove"></span></button>
                     </a>
                     <button type="button" class="aaa" id="det" >Details</button>
-                    <a href='javascript:getView();'>Get Partial View</a>
+                    
                 </td>
 
 
 
             </tr>
             <tr id="try">
-                <div id="detailsPlace"></div>
-                <div id='divResult'></div>
-</tr>
-    
-
-        
-    
+                <div id="detailsPlace"></div>           
+            </tr>    
         }
         </tbody>
 

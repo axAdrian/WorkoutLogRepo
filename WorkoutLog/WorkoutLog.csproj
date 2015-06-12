@@ -119,9 +119,10 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\AddNewController.cs" />
-    <Compile Include="Controllers\CollectionController.cs" />
+    <Compile Include="Controllers\TrainingController.cs" />
+    <Compile Include="Controllers\ExerciseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\WizardController.cs" />
     <Compile Include="DAL\LogContext.cs" />
     <Compile Include="DAL\LogInitializer.cs" />
     <Compile Include="Global.asax.cs">
@@ -212,16 +213,16 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Collection\Collection.cshtml" />
+    <Content Include="Views\Exercise\Index.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Home\info.cshtml" />
-    <Content Include="Views\Collection\Create.cshtml" />
-    <Content Include="Views\AddNew\Index.cshtml" />
-    <Content Include="Views\AddNew\_Details.cshtml" />
-    <Content Include="Views\AddNew\Create.cshtml" />
-    <Content Include="Views\AddNew\TrainingDetails.cshtml" />
-    <Content Include="Views\AddNew\ExerciseDetails.cshtml" />
-    <Content Include="Views\AddNew\Suc.cshtml" />
+    <Content Include="Views\Home\Info.cshtml" />
+    <Content Include="Views\Exercise\Create.cshtml" />
+    <Content Include="Views\Training\Index.cshtml" />
+    <Content Include="Views\Training\_Details.cshtml" />
+    <Content Include="Views\Wizard\TrainingDetails.cshtml" />
+    <Content Include="Views\Wizard\ExerciseDetails.cshtml" />
+    <Content Include="Views\Wizard\Suc.cshtml" />
+    <Content Include="Views\Training\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

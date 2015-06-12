@@ -9,21 +9,16 @@ using WorkoutLog.ViewModel;
 
 namespace WorkoutLog.Controllers
 {
-    public class CollectionController : Controller
+    public class ExerciseController : Controller
     {
         private LogContext db = new LogContext();
         // GET: Collection
 
-        public ActionResult Index()
+        public ActionResult Index() //widok listy ćwiczeń
         {
-            var exercises = db.Exercises;
-
-            var vm = new CollectionViewModel()
-            {
-                Exercises = exercises
-            };
-
-            return View("Collection", vm);
+            var exercises = db.Exercises.ToList();
+          
+            return View(exercises);
         }
 
         public ActionResult Delete(int id)
