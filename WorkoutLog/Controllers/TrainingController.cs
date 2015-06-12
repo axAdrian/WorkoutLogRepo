@@ -1,0 +1,71 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+using WorkoutLog.DAL;
+using WorkoutLog.Models;
+using WorkoutLog.ViewModel;
+
+namespace WorkoutLog.Controllers
+{
+    public class TrainingController : Controller
+    {
+        private LogContext db = new LogContext();
+
+        // GET: AddNew
+        public ActionResult Index()
+        {
+            var training = db.Trainings.ToList();
+
+            return View(training);
+        }
+        
+        public ActionResult Details()
+        {
+            var traninig = db.Trainings.ToList();
+            var exercise = db.Exercises.ToList();
+            var exetrain = db.ExeTrains.ToList();
+
+            var vm = new AddNewViewModel()
+            {
+                Trainings = traninig,
+                Exercises = exercise,
+                Exetrains = exetrain
+            };
+            
+            return PartialView("_Details", vm);
+        }
+
+        public ActionResult Delete(int id)
+        {
+            Training tr = db.Trainings.Find(id);
+            db.Trainings.Remove(tr);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+        [HttpGet]
+        public ActionResult Create()
+        {
+            var tr = new Training();
+
+            return View(tr);
+        }
+
+        [HttpPost]
+        public ActionResult Create(Training tr)
+        {
+            if (!ModelState.IsValid)
+                return View("Create");
+            else
+            {
+                db.Trainings.Add(tr);
+                db.SaveChanges();
+
+                return RedirectToAction("Index");
+            }
+
+        }
+    }
+}
