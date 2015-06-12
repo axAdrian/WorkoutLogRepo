@@ -47,5 +47,10 @@ namespace WorkoutLog.Controllers
             return PartialView("_Details", vm);
         }
 
+        public ActionResult Create()
+        {
+            
+            return View();
+        }
     }
 }

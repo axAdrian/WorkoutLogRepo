@@ -151,6 +151,10 @@
     <Compile Include="Migrations\201506052018144_exercise-update.Designer.cs">
       <DependentUpon>201506052018144_exercise-update.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201506081446501_Update.cs" />
+    <Compile Include="Migrations\201506081446501_Update.Designer.cs">
+      <DependentUpon>201506081446501_Update.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Exercise.cs" />
     <Compile Include="Models\ExeTrain.cs" />
@@ -205,6 +209,7 @@
     <Content Include="Views\Collection\Create.cshtml" />
     <Content Include="Views\AddNew\Index.cshtml" />
     <Content Include="Views\AddNew\_Details.cshtml" />
+    <Content Include="Views\AddNew\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -234,6 +239,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201506052018144_exercise-update.resx">
       <DependentUpon>201506052018144_exercise-update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201506081446501_Update.resx">
+      <DependentUpon>201506081446501_Update.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
