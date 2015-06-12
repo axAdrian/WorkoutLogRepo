@@ -28,6 +28,71 @@ namespace WorkoutLog.Controllers
 
         public ActionResult Add()
         {
+            return View("TrainingDetails");
+        }
+
+        private TrainingDetails GetTraining()
+        {
+            if (Session["training"] == null)
+             {
+                Session["training"] = new TrainingDetails();
+               }
+          return (TrainingDetails)Session["training"];
+        }
+        
+
+        
+
+        private void RemoveTrainingDetails()
+        {
+          Session.Remove("training");
+        }
+
+        [HttpPost]
+        public ActionResult TrainingDetails(TrainingDetails data,
+        string prevBtn, string nextBtn)
+        {
+            if (nextBtn != null)
+            {
+                if (ModelState.IsValid)
+                {
+                    TrainingDetails obj = GetTraining();
+                    obj.TrainingName = data.TrainingName;
+                    obj.Date = data.Date;
+                    return View("ExerciseDetails");
+                }
+            }
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult ExerciseDetails(TrainingDetails data,
+        string prevBtn, string nextBtn)
+        {
+            TrainingDetails obj = GetTraining();
+            if (prevBtn != null)
+            {
+                TrainingDetails bd = new TrainingDetails();
+                bd.TrainingName = obj.TrainingName;
+                bd.Date = obj.Date;
+                return View("TrainingDetails", bd);
+            }
+            if (nextBtn != null)
+            {
+                if (ModelState.IsValid)
+                {
+                    obj.ExerciseName = data.ExerciseName;
+                    obj.Weight = data.Weight;
+                    obj.Sets = data.Sets;
+                    obj.Rep = data.Rep;
+                    obj.Info = data.Info;
+                    db.ExeTrains.Add(obj);// problem
+                    db.SaveChanges();
+                    RemoveTrainingDetails();
+
+                    return View("Index");
+                }
+            }
             return View();
         }
 

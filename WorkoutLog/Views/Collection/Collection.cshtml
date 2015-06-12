@@ -26,9 +26,9 @@
         @foreach (var exercises in Model.Exercises)
         {
             <tr>
-                <td>@exercises.exerciseName</td>
-                <td>@exercises.exerciseDesc</td>
-                <td><a href="@Url.Action("Delete", "Collection", new {id = exercises.exerciseID})">
+                <td>@exercises.ExerciseName</td>
+                <td>@exercises.ExerciseDesc</td>
+                <td><a href="@Url.Action("Delete", "Collection", new {id = exercises.ExerciseID})">
                     <button type="button" class="btn btn-default">Usuń <span class="glyphicon glyphicon-remove"></span></button>
                 </a></td>
             </tr>

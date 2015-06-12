@@ -1,0 +1,37 @@
+﻿@model WorkoutLog.ViewModel.TrainingDetails
+@{
+    ViewBag.Title = "TrainingDetails";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm("TrainingDetails", "AddNew", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>Step 1: Cricketer Details</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.TrainingName, new {@class = "control-label col-md-2"})
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.TrainingName)
+                @Html.ValidationMessageFor(model => model.TrainingName)
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Date, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.Date)
+                @Html.ValidationMessageFor(model => model.Date)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" name="BtnNext" value="Next" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
