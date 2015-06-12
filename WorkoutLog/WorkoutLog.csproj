@@ -159,6 +159,10 @@
     <Compile Include="Migrations\201506121700304_NewViewModel.Designer.cs">
       <DependentUpon>201506121700304_NewViewModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201506122047510_New3.cs" />
+    <Compile Include="Migrations\201506122047510_New3.Designer.cs">
+      <DependentUpon>201506122047510_New3.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Exercise.cs" />
     <Compile Include="Models\ExeTrain.cs" />
@@ -253,6 +257,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201506121700304_NewViewModel.resx">
       <DependentUpon>201506121700304_NewViewModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201506122047510_New3.resx">
+      <DependentUpon>201506122047510_New3.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
