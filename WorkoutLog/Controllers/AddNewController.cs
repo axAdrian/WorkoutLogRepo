@@ -40,17 +40,14 @@ namespace WorkoutLog.Controllers
           return (TrainingDetails)Session["training"];
         }
         
-
         
-
         private void RemoveTrainingDetails()
         {
           Session.Remove("training");
         }
 
         [HttpPost]
-        public ActionResult TrainingDetails(TrainingDetails data,
-        string prevBtn, string nextBtn)
+        public ActionResult TrainingDetails(TrainingDetails data, string prevBtn, string nextBtn)
         {
             if (nextBtn != null)
             {
@@ -66,8 +63,7 @@ namespace WorkoutLog.Controllers
         }
 
         [HttpPost]
-        public ActionResult ExerciseDetails(TrainingDetails data,
-        string prevBtn, string nextBtn)
+        public ActionResult ExerciseDetails(TrainingDetails data, string prevBtn, string nextBtn)
         {
             TrainingDetails obj = GetTraining();
             if (prevBtn != null)
@@ -86,16 +82,31 @@ namespace WorkoutLog.Controllers
                     obj.Sets = data.Sets;
                     obj.Rep = data.Rep;
                     obj.Info = data.Info;
-                    db.ExeTrains.Add(obj);// problem
-                    db.SaveChanges();
-                    RemoveTrainingDetails();
+                    //ExeTrain exeTrain = new ExeTrain();
+                    //Exercise exercise = new Exercise();
+                    //Training training = new Training();
 
-                    return View("Index");
+                    //training.TrainingName = obj.TrainingName;
+                    //training.Date = obj.Date;
+                    //exercise.ExerciseName = obj.ExerciseName;
+                    //exeTrain.Weight = obj.Weight;
+                    //exeTrain.Rep = obj.Rep;
+                    //exeTrain.Sets = obj.Sets;
+                    //exeTrain.Info = obj.Info;
+
+                    //db.ExeTrains.Add(exeTrain);// problem
+                    //db.Exercises.Add(exercise);
+                    //db.Trainings.Add(training);
+                    //db.SaveChanges();
+                    //RemoveTrainingDetails();
+
+                    return View("Suc");
                 }
             }
             return View();
         }
 
+        
         public ActionResult Details()
         {
             var traninig = db.Trainings.ToList();

@@ -166,8 +166,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModel\AddNewViewModel.cs" />
     <Compile Include="ViewModel\CollectionViewModel.cs" />
-    <Compile Include="ViewModel\ExeDetails.cs" />
-    <Compile Include="ViewModel\ExerciseDetails.cs" />
     <Compile Include="ViewModel\TrainingDetails.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -219,6 +217,7 @@
     <Content Include="Views\AddNew\Create.cshtml" />
     <Content Include="Views\AddNew\TrainingDetails.cshtml" />
     <Content Include="Views\AddNew\ExerciseDetails.cshtml" />
+    <Content Include="Views\AddNew\Suc.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

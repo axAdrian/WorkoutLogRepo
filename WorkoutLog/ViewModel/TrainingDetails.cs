@@ -9,7 +9,8 @@ namespace WorkoutLog.ViewModel
 {
     public class TrainingDetails
     {
-        [Required]
+       
+        [Required(ErrorMessage = "Musisz podać nazwę ćwiczenia!")]
         public string TrainingName { get; set; }
 
         public DateTime Date { get; set; }
