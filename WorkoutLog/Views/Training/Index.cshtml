@@ -1,4 +1,4 @@
-﻿@model IEnumerable<WorkoutLog.Models.Training>
+﻿@model System.Collections.Generic.IEnumerable<WorkoutLog.Models.Training>
 
 @{
     ViewBag.Title = "Index";
@@ -51,9 +51,12 @@
                 <td>@trainings.Date</td>
                 <td>@trainings.TrainingName</td>
                 <td>
-                    
-                    <a href="@Url.Action("Delete", "Training", new {id = trainings.TrainingID})">
+
+                    <a href="@Url.Action("Delete", "Training", new {id = trainings.TrainingId})">
                         <button type="button" class="btn btn-default">Usuń <span class="glyphicon glyphicon-remove"></span></button>
+                    </a>
+                    <a href="@Url.Action("Index", "Wizard", new {id = trainings.TrainingId})">
+                        <button type="button" class="btn btn-default">Dodaj cwiczenie <span class="glyphicon glyphicon-remove"></span></button>
                     </a>
                     <button type="button" class="aaa" id="det" >Details</button>
                     

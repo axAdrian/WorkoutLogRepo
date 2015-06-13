@@ -3,47 +3,35 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using WorkoutLog.ViewModels;
 
 namespace WorkoutLog.Controllers
 {
     public class WizardController : Controller
     {
         // GET: Wizard
-        public ActionResult Index()
+        public ActionResult Index(int id)
         {
-            return View("TrainingDetails");
+            var obj = new TrainingDetailsViewModel();
+            obj.TrainingId = id;
+            return View("TrainingDetails", obj);
         }
 
-//        private TrainingDetails GetTraining()
-//        {
-//            if (Session["training"] == null)
-//            {
-//                Session["training"] = new TrainingDetails();
-//            }
-//            return (TrainingDetails)Session["training"];
-//        }
-
-
-//        private void RemoveTrainingDetails()
-//        {
-//            Session.Remove("training");
-//        }
-
-//        [HttpPost]
-//        public ActionResult TrainingDetails(TrainingDetails data, string prevBtn, string nextBtn)
-//        {
-//            if (nextBtn != null)
-//            {
-//                if (ModelState.IsValid)
-//                {
-//                    TrainingDetails obj = GetTraining();
-//                    obj.TrainingName = data.TrainingName;
-//                    obj.Date = data.Date;
-//                    return View("ExerciseDetails");
-//                }
-//            }
-//            return View();
-//        }
+        //[HttpPost]
+        //public ActionResult ChooseExercise(TrainingDetailsViewModel data, string prevBtn, string nextBtn)
+        //{
+        //    if (nextBtn != null)
+        //    {
+        //        if (ModelState.IsValid)
+        //        {
+        //            TrainingDetailsViewModel obj = GetTraining();
+        //            obj.TrainingID = data.TrainingID;
+        //            obj.Date = data.Date;
+        //            return View("ExerciseDetails");
+        //        }
+        //    }
+        //    return View();
+        //}
 
 //        [HttpPost]
 //        public ActionResult ExerciseDetails(TrainingDetails data, string prevBtn, string nextBtn)

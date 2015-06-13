@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using WorkoutLog.DAL;
 using WorkoutLog.Models;
-using WorkoutLog.ViewModel;
+using WorkoutLog.ViewModels;
 
 namespace WorkoutLog.Controllers
 {

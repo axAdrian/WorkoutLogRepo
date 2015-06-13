@@ -9,7 +9,7 @@ namespace WorkoutLog.Models
     public class Exercise
     {
         [Key]
-        public int ExerciseID { get; set; }
+        public int ExerciseId { get; set; }
 
         [Required(ErrorMessage = "Musisz podać nazwę ćwiczenia!")]
         [Display(Name = "Nazwa ćwiczenia:")]

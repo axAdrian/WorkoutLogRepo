@@ -1,5 +1,5 @@
 ﻿
-@model WorkoutLog.ViewModel.AddNewViewModel
+@model WorkoutLog.ViewModels.AddNewViewModel
 
 @{
     ViewBag.Title = "Szczegóły";
@@ -9,27 +9,28 @@
 <div>
     <table id="example" class="table table-striped table-bordered" cellspacing="0" width="60%">
         <thead>
-            <tr>
-                <th>Nazwa</th>
-                <th>Serie</th>
-                <th>Powtorzenia</th>
-                <th>Ciężar</th>
-                <th>Info</th>
-            </tr>
+        <tr>
+            <th>Nazwa</th>
+            <th>Serie</th>
+            <th>Powtorzenia</th>
+            <th>Ciężar</th>
+            <th>Info</th>
+        </tr>
         </thead>
 
         <tbody>
-            @foreach (var exe in Model.Exercises)
-            {
-                <tr>
-                    <td>@exe.ExerciseName</td>
-                    @foreach (var etrain in Model.Exetrains)
-                    {
-                        <td>@etrain.Sets</td>
-                        <td>@etrain.Rep</td>
-                    }
-                </tr>
-            }
+        @foreach (var exe in Model.Exercises)
+        {
+            <tr>
+                <td>@exe.ExerciseName</td>
+                @foreach (var etrain in Model.Exetrains)
+                {
+                    <td>@etrain.Sets</td>
+                    <td>@etrain.Rep</td>
+                }
+            </tr>
+        }
         </tbody>
     </table>
+    
 </div>

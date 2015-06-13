@@ -7,7 +7,7 @@ namespace WorkoutLog.Models
 {
     public class Training
     {
-        public int TrainingID { get; set; }
+        public int TrainingId { get; set; }
         public DateTime Date { get; set; }
         public string TrainingName { get; set; }
 

@@ -7,9 +7,9 @@ namespace WorkoutLog.Models
 {
     public class ExeTrain
     {
-        public int ExeTrainID { get; set; }
-        public int TrainingID { get; set; }
-        public int ExerciseID { get; set; }
+        public int ExeTrainId { get; set; }
+        public int TrainingId { get; set; }
+        public int ExerciseId { get; set; }
 
         public int Sets { get; set; }
         public int Rep { get; set; }

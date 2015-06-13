@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using WorkoutLog.Models;
 
-namespace WorkoutLog.ViewModel
+namespace WorkoutLog.ViewModels
 {
     public class CollectionViewModel
     {

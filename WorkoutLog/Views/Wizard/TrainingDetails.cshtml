@@ -1,10 +1,10 @@
-﻿@model WorkoutLog.ViewModel.TrainingDetails
+﻿@model WorkoutLog.ViewModels.TrainingDetailsViewModel
 @{
     ViewBag.Title = "TrainingDetails";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-@using (Html.BeginForm("TrainingDetails", "AddNew", FormMethod.Post))
+@using (Html.BeginForm("Index", "Wizard", FormMethod.Post))
 {
     @Html.AntiForgeryToken()
 

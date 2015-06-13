@@ -5,14 +5,14 @@ using System.Linq;
 using System.Web;
 using WorkoutLog.Models;
 
-namespace WorkoutLog.ViewModel
+namespace WorkoutLog.ViewModels
 {
-    public class TrainingDetails
+    public class TrainingDetailsViewModel
     {
        
         [Required(ErrorMessage = "Musisz podać nazwę ćwiczenia!")]
         public string TrainingName { get; set; }
-
+        public int TrainingId { get; set; }
         public DateTime Date { get; set; }
 
         //Exercise
