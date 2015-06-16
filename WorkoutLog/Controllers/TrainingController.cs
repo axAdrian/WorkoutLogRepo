@@ -50,7 +50,7 @@ namespace WorkoutLog.Controllers
         public ActionResult Create()
         {
             var tr = new Training();
-
+            tr.Date = DateTime.Now;
             return View(tr);
         }
 
