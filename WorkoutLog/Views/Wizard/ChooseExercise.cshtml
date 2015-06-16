@@ -1,0 +1,40 @@
+﻿@model IEnumerable<WorkoutLog.Models.Exercise>
+
+@{
+    ViewBag.Title = "ChooseExercise";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>ChooseExercise</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ExerciseName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ExerciseDesc)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ExerciseName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ExerciseDesc)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ExerciseId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ExerciseId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ExerciseId })
+        </td>
+    </tr>
+}
+
+</table>

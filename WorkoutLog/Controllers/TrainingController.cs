@@ -22,20 +22,20 @@ namespace WorkoutLog.Controllers
             return View(training);
         }
         
-        public ActionResult Details()
+        public ActionResult Details(int id)
         {
-            var traninig = db.Trainings.ToList();
-            var exercise = db.Exercises.ToList();
-            var exetrain = db.ExeTrains.ToList();
+            Training traninig = db.Trainings.Find(id);
+          //  var exercise = db.Exercises.ToList();
+          //  var exetrain = db.ExeTrains.ToList();
 
-            var vm = new AddNewViewModel()
-            {
-                Trainings = traninig,
-                Exercises = exercise,
-                Exetrains = exetrain
-            };
+            //var vm = new AddNewViewModel()
+            //{
+            //    Trainings = traninig,
+            //    Exercises = exercise,
+            //    Exetrains = exetrain
+            //};
             
-            return PartialView("_Details", vm);
+            return PartialView(traninig);
         }
 
         public ActionResult Delete(int id)

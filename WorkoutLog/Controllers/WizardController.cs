@@ -14,7 +14,15 @@ namespace WorkoutLog.Controllers
         {
             var obj = new TrainingDetailsViewModel();
             obj.TrainingId = id;
-            return View("TrainingDetails", obj);
+
+            List<TrainingDetailsViewModel> objList = new List<TrainingDetailsViewModel>();
+            objList.Add(obj);
+            return View("ChooseExercise", objList);
+        }
+
+        public ActionResult Suc()
+        {
+            return View();
         }
 
         //[HttpPost]
