@@ -22,7 +22,7 @@ namespace WorkoutLog.Controllers
             return View(training);
         }
         
-        public ActionResult Details(int id)
+        public ActionResult Details(int? id)
         {
             Training traninig = db.Trainings.Find(id);
           //  var exercise = db.Exercises.ToList();
@@ -35,7 +35,7 @@ namespace WorkoutLog.Controllers
             //    Exetrains = exetrain
             //};
             
-            return PartialView(traninig);
+            return View(traninig);
         }
 
         public ActionResult Delete(int id)

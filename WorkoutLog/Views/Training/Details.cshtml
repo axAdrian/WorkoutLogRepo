@@ -37,6 +37,40 @@
         <p>Cwiczenie:  @exeTrain.Exercise.ExerciseName</p>
         <p>Seria: @exeTrain.Sets Powt: @exeTrain.Rep</p>
     }
+
+    <table id="example" class="table table-striped table-bordered" cellspacing="0" width="60%">
+        <thead>
+        <tr>
+            <th>Data treningu</th>
+            <th>Nazwa</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr>
+            <td>@Html.DisplayFor(model => model.Date).</td>
+            <td>@Html.DisplayFor(model => model.TrainingName)</td>
+        </tr>
+
+        </tbody>
+    </table>
+
+    <table id="example" class="table table-striped table-bordered" cellspacing="0" width="60%">
+        <thead>
+            <tr>
+                <th>Cwiczenie:</th>
+                <th>Ilość serii:</th>
+                <th>Ilość powtórzeń:</th>
+                <th>Ciężar:</th>
+                <th>Opis:</th>
+            </tr>
+        </thead>
+
+        <tbody>
+           foreach
+
+        </tbody>
+    </table>
 </div>
 <p>
    @* @Html.ActionLink("Edit", "Edit", new { id = Model.TrainingId }) |*@

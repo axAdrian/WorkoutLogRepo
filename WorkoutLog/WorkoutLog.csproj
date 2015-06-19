@@ -169,6 +169,10 @@
     <Compile Include="Migrations\201506130852102_SatUpdate.Designer.cs">
       <DependentUpon>201506130852102_SatUpdate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201506182127524_rename.cs" />
+    <Compile Include="Migrations\201506182127524_rename.Designer.cs">
+      <DependentUpon>201506182127524_rename.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Exercise.cs" />
     <Compile Include="Models\ExeTrain.cs" />
@@ -269,6 +273,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201506130852102_SatUpdate.resx">
       <DependentUpon>201506130852102_SatUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201506182127524_rename.resx">
+      <DependentUpon>201506182127524_rename.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
