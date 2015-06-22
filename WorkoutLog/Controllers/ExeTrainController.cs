@@ -22,7 +22,8 @@ namespace WorkoutLog.Controllers
                 TrainingId = trainingId
             };
 
-            ViewBag.ListOfExercises = db.Exercises.ToList();
+            var exercises = db.Exercises.ToList();
+            ViewBag.ListForDropdown = new SelectList(exercises, "ExerciseID", "ExerciseName");
 
             return View(exeTrain);
         }
