@@ -67,7 +67,8 @@
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    
+    <a href="@Url.Action("Details", "Training", new { id = Model.TrainingId})"> Powrót </a>
 </div>
 
 @section Scripts {
