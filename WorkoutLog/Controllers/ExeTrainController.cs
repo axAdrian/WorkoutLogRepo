@@ -14,10 +14,14 @@ namespace WorkoutLog.Controllers
 
         public LogContext db = new LogContext();
 
-        //public ActionResult Index(int id)
-        //{
-        //    return View("~/Training/Details.cshtml", id);
-        //}
+
+        public ActionResult Delete(int id)
+        {
+            ExeTrain exetrain = db.ExeTrains.Find(id);
+            db.ExeTrains.Remove(exetrain);
+            db.SaveChanges();
+            return RedirectToAction("Details", "Training", new {id = exetrain.TrainingId});
+        }
 
         [HttpGet]
         public ActionResult Create(int trainingId)
@@ -37,13 +41,18 @@ namespace WorkoutLog.Controllers
         public ActionResult Create(ExeTrain exeTrain)
         {
             // DO bazy
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
+            {
+                return View("Create");
+            }
+            else
             {
                 db.ExeTrains.Add(exeTrain);
                 db.SaveChanges();
+                return RedirectToAction("Details", "Training", new { id = exeTrain.TrainingId });
             }
 
-            return RedirectToAction("Details", "Training", new { id = exeTrain.TrainingId });
+            //return RedirectToAction("Details", "Training", new { id = exeTrain.TrainingId });
         }
 
     }

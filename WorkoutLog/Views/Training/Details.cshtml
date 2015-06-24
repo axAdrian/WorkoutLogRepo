@@ -1,7 +1,7 @@
 ﻿@model WorkoutLog.Models.Training
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Szczegóły treningu";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <br />
@@ -38,6 +38,7 @@
                 <th>Ilość powtórzeń:</th>
                 <th>Ciężar:</th>
                 <th>Opis:</th>
+                <th>Opcje:</th>
             </tr>
         </thead>
         <tbody>
@@ -50,6 +51,9 @@
                         <td>@exetrain.Rep</td>
                         <td>@exetrain.Weight</td>
                         <td>@exetrain.Info</td>
+                        <td> <a href="@Url.Action("Delete", "ExeTrain", new {id = exetrain.ExeTrainId})">
+    <button type="button" class="btn btn-default">Usuń <span class="glyphicon glyphicon-remove"></span></button>
+</a></td>
                     </tr>
                 }
             </tr>
@@ -59,5 +63,5 @@
 </div>
 <p>
    @* @Html.ActionLink("Edit", "Edit", new { id = Model.TrainingId }) |*@
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Powrót do listy treningów", "Index")
 </p>

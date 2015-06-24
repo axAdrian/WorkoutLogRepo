@@ -173,6 +173,14 @@
     <Compile Include="Migrations\201506182127524_rename.Designer.cs">
       <DependentUpon>201506182127524_rename.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201506232117028_Final.cs" />
+    <Compile Include="Migrations\201506232117028_Final.Designer.cs">
+      <DependentUpon>201506232117028_Final.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201506232247043_Final2.cs" />
+    <Compile Include="Migrations\201506232247043_Final2.Designer.cs">
+      <DependentUpon>201506232247043_Final2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Exercise.cs" />
     <Compile Include="Models\ExeTrain.cs" />
@@ -228,7 +236,6 @@
     <Content Include="Views\Home\Info.cshtml" />
     <Content Include="Views\Exercise\Create.cshtml" />
     <Content Include="Views\Training\Index.cshtml" />
-    <Content Include="Views\Shared\_Details.cshtml" />
     <Content Include="Views\Training\Create.cshtml" />
     <Content Include="Views\Training\Details.cshtml" />
     <Content Include="Views\ExeTrain\Create.cshtml" />
@@ -276,6 +283,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201506182127524_rename.resx">
       <DependentUpon>201506182127524_rename.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201506232117028_Final.resx">
+      <DependentUpon>201506232117028_Final.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201506232247043_Final2.resx">
+      <DependentUpon>201506232247043_Final2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
